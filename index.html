@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Neucha|Patua+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <title>Final Project | Javascript Developer</title>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+
+  <section id="home">
+    <nav>
+      <div class="navigation">
+        <div class="collapse">
+          <div class="collapse__top"></div>
+          <div class="collapse__middle"></div>
+          <div class="collapse__bottom"></div>
+        </div>
+      </div>
+
+      <!-- <div class="toggle"><a><i class="fas fa-bars"></i></a></div>
+      <div class="menu">
+        <ul>
+          <li><a href="#"></a>Home</li>
+          <li><a href="#"></a>About</li>
+          <li><a href="#"></a>Portfolio</li>
+          <li><a href="#"></a>Contact</li>
+        </ul>
+      </div> -->
+
+    </nav>
+    <div class="description">
+      <p class="short-text">
+        <span class="short-text__title-name">Hello there, I am Roy Frias</span>
+      </p>
+      <p class="short-text">
+        <span class="short-text__title-pro">I’m a Junior Front End Developer</span>
+      </p>
+      <div style="margin-top: 25px; opacity: 0.9">
+        <a href="#about" class="btn">More About Me</a>
+      </div>
+
+    </div>
+
+    <ul class="mnavigation">
+      <li class="mnavigation__item"><a href="#home">Home</a></li>
+      <li class="mnavigation__item"><a href="#about">About</a></li>
+      <li class="mnavigation__item"><a href="#portfolio">Portfolio</a></li>
+      <li class="mnavigation__item"><a href="#contact">Contact</a></li>
+    </ul>
+    
+  </section>
+  <section id="about">
+    <div class="container">
+      <div class="intro">
+        <div class="page-header">About</div>
+        <div class="intro__photo">
+          <div class="circle">
+            <div class="circle__inside">
+              <img src="img/Roy'sPhoto.jpg" alt="Roy's Pic" class="circle__img"/>
+            </div>
+          </div>
+        </div>
+        <div class="intro__text">
+          <p>
+            Hi!!. My Name is Roy Frias and I am<span class="intro__text--highlight">a Junior Front End Developer</span>. As a college student I pursued the Education route. I graduated from college with a Bachelors In Science with a concentration in Physical Education & Health. As my career progressed as a teacher I felt stuck in a place that I really wasn't happy so decided I should transitioned into another field and thats when I became a banker. As I became a banker and learned the ropes in the finance world, I started becoming interested in programming and this is where I found my passion in creating beautiful websites and web apps that people can easily use. Ive been actively learning programming now for about 5 months now and I absolutely love it. Its difficult to get time to study with being a full time dad and working as a full time banker. But that hasnt stopped me and I am now actively pursuing a new career as a Front End Developer. If you’re interested in hiring, then scroll bellow in order to take a look at my best works.
+          </p>
+          <br>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+
+  <section id="portfolio">
+
+    <div class="container">
+      <div class="thumbnails">
+
+        <div class="page-header">
+          Portfolio
+        </div>
+
+        <div class="thumbnails__item" id="surface_0">
+          <img src="img/bookfinder.jpg" alt="" class="thumbnails__img">
+          <div class="thumbnails__item--overlay">
+            <div class="zoom-in">
+              <div class="zoom-in__circle">
+                <div class="zoom-in__hbar"></div>
+                <div class="zoom-in__vbar"></div>
+                <div class="zoom-in__hbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="thumbnails__item" id="surface_1">
+          <img src="img/bookfinder.jpg" alt="" class="thumbnails__img">
+          <div class="thumbnails__item--overlay">
+            <div class="zoom-in">
+              <div class="zoom-in__circle">
+                <div class="zoom-in__hbar"></div>
+                <div class="zoom-in__vbar"></div>
+                <div class="zoom-in__hbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="thumbnails__item" id="surface_2">
+          <img src="img/bookfinder.jpg" alt="" class="thumbnails__img">
+          <div class="thumbnails__item--overlay">
+            <div class="zoom-in">
+              <div class="zoom-in__circle">
+                <div class="zoom-in__hbar"></div>
+                <div class="zoom-in__vbar"></div>
+                <div class="zoom-in__hbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+
+
+
+    </div>
+
+
+  <section id="contact">
+    <div class="container">
+      <div id="cards">
+        <div class="page-header">
+          Contact me
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <div class="card__title">
+              Send me a message
+            </div>
+            <div class="card__content">
+              <form class="form">
+                <label for="name" class="form__label">Your Name</label>
+                <input type="text" name="" id="name" class="form__input">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" name="" id="email" class="form__input">
+                <label for="subject" class="form__label">Subject</label>
+                <input type="text" name="" id="subject" class="form__input">
+                <label for="message" class="form__label">Message</label>
+                <textarea name="" id="message" class="form__input form__textarea"></textarea>
+              </form>
+              <a href="#send" class="btn btn--blue btn--block">Send the message</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body card__body--dark card__body--no-side-spaces">
+            <div class="card__title">
+              Contact me on the Internet
+            </div>
+            <div class="card__content card__content--no-spaces">
+              <ul class="list">
+                <li class="list__item"> <img src="img/github.svg" alt="Github" class="list__icon"> <a
+                    href="https://github.com/DeylRaytop" target="_blank" class="list__link">My
+                    Github repository</a></li>
+
+                <li class="list__item">
+                  <img src="img/linkedin.svg" alt="LinkedIn" class="list__icon"> <a
+                    href="https://www.linkedin.com/in/royfrias/" target="_blank" class="list__link">See
+                    my LinkedIn profile</a></li>
+
+                <li class="list__item"><img src="img/twitter.svg" alt="Twitter" class="list__icon"> <a
+                    href="https://twitter.com/deylraytop" target="_blank" class="list__link">Follow
+                    me on Twitter</a></li>
+
+              </ul>
+
+            </div>
+          </div>
+          <div class="footer">Roy Frias © 2020</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
