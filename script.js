@@ -24,6 +24,11 @@
 
 
 
+
+
+
+
+
 let portfolioUrl = 'https://spreadsheets.google.com/feeds/list/16gT3ULdhVZSYIyzX-IOjWOr7Z1iXw2le4qEEea4GKAU/1/public/values?alt=json'
 
 
@@ -44,13 +49,19 @@ fetch(portfolioUrl)
     //lets map over the array..
     //map returns what?... a new array
     let portfolioArr = data.feed.entry.map(d => {
-      return
-        d.project.$t
+      return d.project.$t
      
     })
     console.log(portfolioArr);
   }
 
   console.log('after fetch');
+
+
+
+
+$(".clickImage").on('click', function () {
+ $('.thumbnails__img')
+});
 
 
