@@ -34,38 +34,46 @@ console.log('before fetch');
 
 let cards = [];
 
-fetch(source)
+fetch(portfolioUrl)
   .then(res => res.json())
   .then(data => render(data));
 
+
+
+function formatData(data) {
+  data.feed.entry.forEach(card => {
+
+    let eachCard = new Card(
+      card.gsx$project.$t,
+      card.gsx$image.$t,
+      card.gsx$description.$t
+    );
+    cards.push(eachCard);
+  });
+  return cards
+}
+  
 /* Renders data */
 function render(data) {
   let formatedCards = formatData(data)
   console.log('this is data', data)
   formatedCards.forEach(card =>
     newCard(
-      card.img,
-      card.name,
-      card.style,
-      card.notes,
-      card.stamp,
-      card.brewery
+      card.project,
+      card.image,
+      card.description,
     )
   );
 }
 
-function formatData(data) {
-  data.feed.entry.forEach(card => {
-    let eachProject = new Project(
-      card.gsx$project.$t,
-      card.gsx$image.$t,
-      card.gsx$description.$t
-    );
-    cards.push(eachProject);
-  });
-  return cards
-}
 
+
+function Card(image, project, description ) {
+  this.project = project;
+  this.image = image;
+  this.description = description;
+ 
+}
 
 
 
@@ -85,8 +93,8 @@ function formatData(data) {
 
 
 
-$(".clickImage").on('click', function () {
- $('.thumbnails__img')
-});
+// $(".clickImage").on('click', function () {
+//  $('.thumbnails__img')
+// });
 
 
