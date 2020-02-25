@@ -1,4 +1,4 @@
-// (function main() {
+
   const doc = document;
 
   // Shortcuts to DOM methods
@@ -19,11 +19,6 @@
     collapseBottom.classList.toggle('collapse__bottom--change');
   };
 
-// })();
-
-
-
-
 
 
 
@@ -39,23 +34,53 @@ console.log('before fetch');
 
 let cards = [];
 
-fetch(portfolioUrl)
+fetch(source)
   .then(res => res.json())
-  .then(data => formatData(data) )
+  .then(data => render(data));
 
-  function formatData(data) {
-    // we need to return new array of portfolio projects
-    // console.log(data.feed.entry)
-    //lets map over the array..
-    //map returns what?... a new array
-    let portfolioArr = data.feed.entry.map(d => {
-      return d.project.$t
+/* Renders data */
+function render(data) {
+  let formatedCards = formatData(data)
+  console.log('this is data', data)
+  formatedCards.forEach(card =>
+    newCard(
+      card.img,
+      card.name,
+      card.style,
+      card.notes,
+      card.stamp,
+      card.brewery
+    )
+  );
+}
+
+function formatData(data) {
+  data.feed.entry.forEach(card => {
+    let eachProject = new Project(
+      card.gsx$project.$t,
+      card.gsx$image.$t,
+      card.gsx$description.$t
+    );
+    cards.push(eachProject);
+  });
+  return cards
+}
+
+
+
+
+
+
+  // function formatData(data) {
+   
+  //   let portfolioArr = data.feed.entry.map(d => {
+  //     return {d.project.$t}
      
-    })
-    console.log(portfolioArr);
-  }
+  //   })
+  //   console.log(portfolioArr);
+  // }
 
-  console.log('after fetch');
+  // console.log('after fetch');
 
 
 
